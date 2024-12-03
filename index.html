@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
     <title>Tran_Quang_Tuan_Portfolio</title>
 </head>
 <body>
@@ -240,19 +243,19 @@
                 </div>
             </div>
             <div class="col-md-6 p-4">
-                    <form onsubmit="sendEmail(); reset(); return false;">
+                    <form id="contact-form">
                       <div class="form-row">
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="first name" placeholder="First Name"> </div>
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="name" placeholder="Last Name"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="First name" placeholder="First name"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="Last name" placeholder="Last name"> </div>
                       </div>
-                      <div class="form-group"> <input type="text" class="form-control" id="company" placeholder="Company"> </div>
-                      <div class="form-group"> <input type="email" class="form-control" id="email" placeholder="Email"> </div>
+                      <div class="form-group"> <input type="text" class="form-control" id="Company" placeholder="Company"> </div>
+                      <div class="form-group"> <input type="email" class="form-control" id="Email" placeholder="Email"> </div>
                       <div class="form-row">
-                        <div class="form-group col-md-6"> <input type="number" class="form-control" id="phone" placeholder="Phone"> </div>
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="country" placeholder="Country"> </div>
+                        <div class="form-group col-md-6"> <input type="number" class="form-control" id="Phone" placeholder="Phone"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="Country" placeholder="Country"> </div>
                       </div>
-                      <div class="form-group"> <input type="text" class="form-control" id="message" placeholder="Subject to discuss"> </div>
-                      <div class="form-group"> <textarea class="form-control" id="context" rows="3" placeholder="Note"></textarea> </div> 
+                      <div class="form-group"> <input type="text" class="form-control" id="Message" placeholder="Message"> </div>
+                      <div class="form-group"> <textarea class="form-control" id="Note" rows="3" placeholder="Note"></textarea> </div> 
                       <button type="submit" class="btn-new my-0">Send</button>
                     </form>
                   </div>
@@ -261,7 +264,7 @@
     </div>
 </section><!-- FIX LATER -->
 
-<!-- <script>
+<script>
     const li=document.querySelectorAll(".links");
     const sec=document.querySelectorAll("section");
 
@@ -273,27 +276,11 @@
     }
     activeMenu();
     window.addEventListener("scroll", activeMenu);
-</script> -->
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail(){
-        Email.send({
-            secureToken: "cfaffd5f-6179-4588-890e-dce445d1f77d",
-            To : 'tranquangtuan31072000@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "This is the subject",
-            Body : "Name: " + document.getElementById("name").value
-                + "<br> Email: " + document.getElementById("email").value
-                + "<br> Phone no: " + document.getElementById("phone").value
-                + "<br> Company name: " + document.getElementById("company").value
-                + "<br> Nation: " + document.getElementById("country").value
-                + "<br> Messages: " + document.getElementById("message").value
-                + "<br> Content: " + document.getElementById("context").value
-        }).then(
-        message => alert("Message Sent Successfully")
-        );
-    }
 </script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/email.js"></script>
+
 <script src="js/language.js"></script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="js/jquery-3.4.1.min.js"></script>
