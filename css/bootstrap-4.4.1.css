@@ -10562,9 +10562,16 @@ span.material-symbols-outlined {
 /* ABOUT ME */
 
 body{
-  background-color: #070A40;
-/*   background-image:url(images/fixed_background_4.jpg);
-  background-size: cover; */}
+  background-color: #070A40;}
+
+.container2 img {
+  position: absolute;
+  width: 40px;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+  align-items:center;
+}
 
 .timeline{
   position: relative;
@@ -10694,8 +10701,11 @@ span.right-container-arrow2{
   .right-container-2{
     left:0;
   }
-  .left-container-2 img, .right-container-2 img{
+  .left-container-2 img {
     left: 10px;
+  }
+  .right-container-2 img {
+    left: -27px;
   }
   .left-container-arrow2, .right-container-arrow2{
     border-right: 15px solid #fff; /* FIX COLOR */

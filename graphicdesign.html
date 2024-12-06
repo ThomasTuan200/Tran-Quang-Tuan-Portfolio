@@ -1703,7 +1703,7 @@
     <div class="container" style="padding-top: 70px">
         <div class="row align-items-center mx-auto">
             <div class="col-md-12 text-center mx-auto wow fadeInUp">
-                <h1 style="color:#A8BBBF" id="contact-me">Contact Me</h1>
+                <h1 style="color:#A8BBBF">Contact Me</h1>
                 <hr>
                 <p>If you have any question you can contact me. It's a pleasure to meet you</p>
             </div>
@@ -1722,26 +1722,43 @@
                 </div>
             </div>
             <div class="col-md-6 p-4">
-                    <form>
+                    <form id="contact-form">
                       <div class="form-row">
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="form36" placeholder="First Name"> </div>
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="form37" placeholder="Last Name"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="First name" placeholder="First name"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="Last name" placeholder="Last name"> </div>
                       </div>
-                      <div class="form-group"> <input type="text" class="form-control" id="form38" placeholder="Company"> </div>
-                      <div class="form-group"> <input type="email" class="form-control" id="form39" placeholder="Email"> </div>
+                      <div class="form-group"> <input type="text" class="form-control" id="Company" placeholder="Company"> </div>
+                      <div class="form-group"> <input type="email" class="form-control" id="Email" placeholder="Email"> </div>
                       <div class="form-row">
-                        <div class="form-group col-md-6"> <input type="number" class="form-control" id="form40" placeholder="Phone"> </div>
-                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="form41" placeholder="Country"> </div>
+                        <div class="form-group col-md-6"> <input type="number" class="form-control" id="Phone" placeholder="Phone"> </div>
+                        <div class="form-group col-md-6"> <input type="text" class="form-control" id="Country" placeholder="Country"> </div>
                       </div>
-                      <div class="form-group"> <input type="text" class="form-control" id="form42" placeholder="Subject to discuss"> </div>
-                      <div class="form-group"> <textarea class="form-control" id="form43" rows="3" placeholder="Note"></textarea> </div> 
+                      <div class="form-group"> <input type="text" class="form-control" id="Message" placeholder="Message"> </div>
+                      <div class="form-group"> <textarea class="form-control" id="Note" rows="3" placeholder="Note"></textarea> </div> 
                       <button type="submit" class="btn-new my-0">Send</button>
                     </form>
                   </div>
             </div>
         </div>
     </div>
-</section>
+</section><!-- FIX LATER -->
+
+<script>
+    const li=document.querySelectorAll(".links");
+    const sec=document.querySelectorAll("section");
+
+    function activeMenu(){
+        let len=sec.length;
+        while(--len && window.scrollY + 97 < sec[len].offsetTop){}
+        li.forEach(ltx => ltx.class.list.remove("active"));
+        li[len].classList.add("active");
+    }
+    activeMenu();
+    window.addEventListener("scroll", activeMenu);
+</script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/email.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
